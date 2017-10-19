@@ -199,11 +199,10 @@ def menu(exits):
         normalised_exit_choice = normalise_input(choice_of_exit)
         # Check if the input makes sense (is valid exit)
             # If so, return the player's choice
-        for exit in exits:
-            if is_valid_exit(exit, normalised_exit_choice):
-            	return normalised_exit_choice
-            else:
-            	print("This is not a valid exit.")
+        if is_valid_exit(exits, normalised_exit_choice):
+            return normalised_exit_choice
+        else:
+            print("This is not a valid exit.")
 
 
 
